@@ -10,6 +10,7 @@ function check(){
 	let question7 = document.quizz.question7.value;
 	let question8 = document.quizz.question8.value;
 	let question9 = document.quizz.question9.value;
+	let question10 = document.quizz.question10.value;
 
 	let correct = 0;
    
@@ -48,6 +49,9 @@ function check(){
 	if(question9 =="Cathy & Kador"){
 		correct++;
 	}
+	if (question10 =="des ramens"){
+		correct++;
+	}
 	
 	let pictures = ["image/yeah.gif", "image/meh.gif", "image/perdu.gif"];
 	let messages = ["Bravo tiens voilà ton cadeau, Clique ICI !", "c'est bien mais c'est pas fou", "t'es vraiment pas doué"];
@@ -57,14 +61,14 @@ function check(){
 		score = 2;
 	}
 
-	if (correct > 0 && correct < 9) {
+	if (correct > 0 && correct < 10) {
 		score = 1;
 	}
 
-	if (correct == 9) {
+	if (correct == 10) {
 		score = 0;
 	}
-    if (correct < 9){
+    if (correct < 10){
 
 	document.getElementById("after_submit").style.visibility = "visible";
 
