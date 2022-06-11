@@ -1,0 +1,423 @@
+/* reset css */
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/*balise général */
+h1{
+    color:white;
+    font-size: 11px;
+    position: relative;
+    margin-left: 10px;
+    top: 15px;
+}
+
+
+/* navigation */
+:root{
+    --background:grey;
+    
+}
+
+*::before, *::after{
+    box-sizing: border-box;
+}
+
+header{
+    background: var(--background);
+    text-align: center;
+    z-index:999;
+    width: 100%;
+    height: 65px;
+    position: fixed;
+}
+
+.content{
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    
+    
+    
+}
+
+
+
+nav{
+    position:absolute;
+    text-align: left;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1,0 );
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-left: 1em;
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after
+{
+display: block;
+background: white;
+height: 2px;
+width: 2em;
+border-radius: 2px;
+position: relative;
+
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after{
+top:7px;
+}
+
+nav ul{
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+
+nav li{
+    margin-bottom:1em;
+    margin-left:1em;
+}
+
+nav a{
+
+    color:white;
+    text-decoration: none;
+   font-size: 1.2rem;
+   text-transform:uppercase;
+   opacity: 0;
+   transition: opacity 150ms ease-in-out;
+
+}
+
+nav a:hover{
+    color:#000;
+ 
+}
+
+.nav-toggle:checked ~ nav{
+
+    transform: scale(1,1);
+
+}
+
+.nav-toggle:checked ~ nav a {
+
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+
+
+}
+
+/*image de fond */
+.fond{
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    position: fixed;
+}
+
+/*première section*/
+#profil{
+    background-color: white;
+    border-radius: 13px;
+    margin-top: 82px;
+    opacity: 0.7;
+    position:relative;
+    top:35px; 
+    padding: 10px;
+}
+
+/*deuxième section */
+#formation{
+    background-color: white;
+    border-radius: 13px;
+    position: relative;
+    opacity: 0.7;
+}
+
+#compétences{
+    background-color: white;
+    border-radius: 13px;
+    margin-top: 50px;
+    opacity: 0.7;
+    position:relative;
+}
+progress{
+    width: 50%;
+}
+
+.formation-date{
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+span{
+  display: block;
+}
+
+/*troisième section */
+#projet{
+    background-color: white;
+    border-radius: 13px;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+#titre_projet{
+    margin-top: 15px;
+    position: relative;
+    top:45px;
+    margin-bottom: 50px;
+    margin-left: 40px;    
+}
+
+label{
+    white-space:normal;
+    width: 100%;
+    }
+    
+    .projet1 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .projet2 {
+        font-size: 21px;
+        margin-bottom: 12px;
+        z-index: -1;
+        position: relative;
+    }
+
+    .rezise{
+        height: 200px;
+    }
+
+    #photo{
+        position: relative;
+        bottom: 30px;
+    }
+  
+  
+  
+    #camera_thermique{
+        position: relative;
+        margin-bottom: 50px;
+    }
+    
+    
+/*quatrième section */
+#le_reste{
+    background-color: white;
+    border-radius: 13px;
+    opacity: 0.7;
+    position: relative;
+    bottom: 24px;
+    
+}
+
+#contact{
+    background-color: white;
+    opacity: 0.7;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#linkedin{
+    height: 50px;
+}
+
+#linkedin:hover{
+    width: 150px;
+}
+
+#github{
+    height: 50px;
+    
+}
+#github:hover {
+width: 150px;
+  }
+
+#langue{
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 5px;
+}
+
+
+
+
+.centre_dinteret{
+    margin-top: 50px;
+}
+
+
+
+
+/* responsive */
+@media screen and (min-width:800px){
+    .nav-toggle-label{
+        display: none;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+
+    .cv{
+        grid-column: 1/3;
+        margin-top: 10px;
+
+    }
+
+    nav{
+        all:unset;
+        grid-column: 3/4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center ;
+    }
+
+    nav a{
+        opacity: 1;
+        position: relative;
+
+    }
+
+    nav a::before{
+        content: '';
+        display: block;
+        height: 5px;
+        background: black;
+        position: absolute;
+        bottom:-.75em;
+        left: 0;
+        right: 0;
+        transform-origin: left;
+        transform:scale(0, 1);
+        transition:transform ease-in-out 250ms;
+
+    }
+
+
+    nav ul{
+        display: flex;
+     
+    }
+
+    nav li{
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+
+
+}
+
+@media (min-width: 1100px){
+    .content{
+        max-width: 1100px;
+    }
+}
+
+
+
+/*media pour l'impression */
+
+@media print {
+    /* *{
+        size:A4 ;
+    } */
+    h1{
+        display: none;
+    }
+
+    .fond{
+        display: none;
+    }
+    .content{
+        position: relative;
+        bottom: 85px;
+    }
+  
+    #photo{
+        display: none;
+    }
+    
+    #camera_thermique{
+        display: none;
+    }
+
+
+
+
+    #formation{
+        position: relative;
+        margin-bottom:12px;
+    }
+
+    .formation-date{
+        text-decoration: underline;
+        margin-bottom: 5px;
+    }
+
+    #profil{
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    progress{
+        display: none;
+        width: 0;
+        position: relative;
+        
+    }
+
+    span {
+        display: flex;
+    }
+    #contact{
+        display: none;
+    }
+
+    #titre{
+        margin-top: 0px;
+        position: relative;
+        top:50px;
+       
+    }
+  }
