@@ -459,14 +459,25 @@ width: 150px;
 @media screen and (max-width:800px) {
     #profil{
         font-size:20px;
+        width: 350px;
     }
+    
 
     #titre_competence{
         font-size: 20px;
+        
     }
 
     #ma_formation{
         font-size: 20px;
+    }
+
+    #projet{
+        width: 350px;
+    }
+
+    #compétences{
+        width: 350px;
     }
 }
 
