@@ -458,8 +458,9 @@ width: 150px;
 }
 @media screen and (max-width:800px) {
     #profil{
-        font-size:20px;
-        width: 150px;
+        font-size:13px;
+        width: 300px;
+        padding: 10px;
     }
     
 
@@ -473,11 +474,15 @@ width: 150px;
     }
 
     #projet{
-        width: 150px;
+        width: 270px;
     }
 
     #compétences{
-        width: 150px;
+        width: 270px;
+    }
+
+    #moi{
+        height: 100px;
     }
 }
 
