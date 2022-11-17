@@ -459,7 +459,7 @@ width: 150px;
 @media screen and (max-width:800px) {
     #profil{
         font-size:13px;
-        width: 300px;
+        width: 270px;
         padding: 10px;
     }
     
@@ -474,14 +474,22 @@ width: 150px;
     }
 
     #projet{
-        width: 270px;
+        width: 200px;
     }
 
     #compétences{
-        width: 270px;
+        width: 200px;
     }
 
     #moi{
+        height: 100px;
+    }
+
+    #photo{
+        height: 100px;
+    }
+
+    #camera_thermique{
         height: 100px;
     }
 }
