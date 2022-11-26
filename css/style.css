@@ -15,6 +15,14 @@ h1{
     top: 15px;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.titre{
+    font-size: 15px;
+}
 
 /* navigation */
 :root{
@@ -456,6 +464,7 @@ width: 150px;
 
   
 }
+
 @media screen and (max-width:800px) {
     #profil{
         font-size:13px;
