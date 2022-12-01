@@ -401,7 +401,7 @@ width: 150px;
 
 
 /* responsive */
-@media screen and (min-width:800px){
+@media screen and (min-width:807px){
  
     .nav-toggle-label{
         display: none;
