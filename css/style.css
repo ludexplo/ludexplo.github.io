@@ -332,7 +332,6 @@ span{
 
     #photo{
         position: relative;
-        bottom: 30px;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -461,48 +460,77 @@ width: 150px;
     .titre{
         position: relative;
         margin-left: 10px;
-        top: 15px;
-        font-size: 14px;
+        top: 10px;
+        font-size: 13px;
     }
     #profil{
+        position: relative;
         font-size:13px;
         width: 270px;
         padding: 10px;
+        right: 16px;
     }
     
-
+    
     #titre_competence{
         font-size: 20px;
         
     }
-
+    
     #ma_formation{
         font-size: 20px;
     }
-
-    #projet{
-        width: 200px;
-    }
-
+    
+ 
+    
     #compétences{
         width: 200px;
     }
-
+    
     #moi{
         height: 100px;
     }
-
+    
     #photo{
         height: 100px;
+    
     }
-
+    
     #camera_thermique{
-        height: 100px;
+        height: 150px;
+        margin-top: 12px;
+        margin-bottom: 15px;
     }
+    
+    #projet{
+        padding: 10px;
+    
+    }
+    #titre_projet{
+    
+           font-size: 15px;
+       
+    }
+    
+    .projet1 {
+        
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 34px;
+    position: relative;
+    text-align: center;
+    }
+    
+    .projet2 {
+    font-size: 15px;
+    margin-bottom: -6px;
+    margin-top: 26px;
+    text-align: center;
+    position: relative;
+    }
+    
+
 }
     
-  
-
-
 
 
