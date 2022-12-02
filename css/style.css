@@ -453,7 +453,8 @@ width: 150px;
         margin-left: 3em;
         margin-bottom: 0;
     }
- 
+
+
 }
 
 @media screen and (max-width:1000px) {
@@ -504,6 +505,9 @@ width: 150px;
     
     #projet{
         padding: 10px;
+        position: relative;
+        right: 50px;
+        width: 350px;
     
     }
     #titre_projet{
