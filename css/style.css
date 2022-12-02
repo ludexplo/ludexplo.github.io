@@ -35,7 +35,7 @@ header{
     text-align: center;
     z-index:999;
     width: 100%;
-    height: 45px;
+    height: 65px;
     position: fixed;
 }
 
@@ -72,7 +72,7 @@ nav{
     top:0;
     left:0;
     margin-left: 1em;
-    height: 70%;
+    height: 105%;
     display: flex;
     align-items: center;
 }
@@ -101,7 +101,7 @@ position: relative;
 }
 
 .nav-toggle-label span::after{
-top:4px;
+top:6px;
 }
 
 nav ul{
@@ -473,6 +473,9 @@ width: 150px;
         right: 16px;
     }
     
+    header{
+        height: 45px;
+    }
     #centre_dinteret{
         position: relative;
         width: 250px;
