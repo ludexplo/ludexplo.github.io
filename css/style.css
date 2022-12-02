@@ -35,7 +35,7 @@ header{
     text-align: center;
     z-index:999;
     width: 100%;
-    height: 65px;
+    height: 45px;
     position: fixed;
 }
 
@@ -56,6 +56,7 @@ nav{
     text-align: left;
     background: var(--background);
     width: 100%;
+    margin-top: 10px;
     transform: scale(1,0 );
     transform-origin: top;
     transition: transform 400ms ease-in-out;
@@ -100,7 +101,7 @@ position: relative;
 }
 
 .nav-toggle-label span::after{
-top:7px;
+top:4px;
 }
 
 nav ul{
@@ -243,10 +244,11 @@ nav a:hover{
 #compétences{
     background-color: white;
     border-radius: 13px;
-    margin-top: 100px;
+    margin-top: 80px;
     opacity: 0.7;
     position:relative;
     padding: 10px;
+    
 }
 
 #competence_p p{
@@ -278,7 +280,7 @@ span{
     border-radius: 13px;
     margin-bottom: 15px;
     opacity: 0.7;
-    margin-top: 120px;  
+    margin-top: 80px;  
 
 }
 
@@ -349,13 +351,13 @@ span{
 
     
 /*quatrième section */
-#le_reste{
+#centre_dinteret{
     background-color: white;
     border-radius: 13px;
     opacity: 0.7;
     position: relative;
     bottom: 24px;
-    margin-top: 120px;
+    margin-top: 80px;
     text-align: center;
     
 }
@@ -363,7 +365,6 @@ span{
 #contact{
     background-color: white;
     opacity: 0.7;
-    margin-top: 20px;
     border-radius: 5px;
     text-align: center;
 }
@@ -461,20 +462,27 @@ width: 150px;
     .titre{
         position: relative;
         margin-left: 10px;
-        top: 10px;
+        top: 5px;
         font-size: 13px;
     }
     #profil{
         position: relative;
-        font-size:13px;
-        width: 270px;
-        padding: 10px;
+        font-size:15px;
+        width: 250px;
+        padding: 15px;
         right: 16px;
     }
     
+    #centre_dinteret{
+        position: relative;
+        width: 250px;
+        right: 16px;
+        padding: 7px;
+    }
     
     #titre_competence{
         font-size: 20px;
+        margin-bottom: 25px;
         
     }
     
@@ -482,14 +490,30 @@ width: 150px;
         font-size: 20px;
     }
     
- 
+    .formationp{
+        font-size: 15px;
+    }
+
+    #formation{
+        margin-top: 80px;
+        position: relative;
+        width: 230px;
+    }
     
     #compétences{
-        width: 200px;
+        width: 230px;
+        position: relative;
+        right: 16px;
+    }
+
+    #competence_p p{
+        position: relative;
+        font-size: 17px;
     }
     
     #moi{
         height: 100px;
+        margin-top: 70px;
     }
     
     #photo{
@@ -506,7 +530,7 @@ width: 150px;
     #projet{
         padding: 10px;
         position: relative;
-        right: 50px;
+        right: 30px;
         width: 250px;
     
     }
@@ -516,6 +540,10 @@ width: 150px;
        
     }
     
+    #contact{
+   width: 200px;
+    }
+
     .projet1 {
         
     font-size: 15px;
