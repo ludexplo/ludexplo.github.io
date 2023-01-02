@@ -328,6 +328,12 @@ span{
         position: relative;
     }
 
+    .projet3 {
+        font-size: 21px;
+        text-align: center;
+        position: relative;
+    }
+
     .rezise{
         height: 200px;
     }
@@ -338,7 +344,13 @@ span{
         margin-left: auto;
         margin-right: auto;
     }
-  
+
+    #jeudupendu{
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
   
   
     #camera_thermique{
@@ -522,6 +534,10 @@ width: 150px;
     #photo{
         height: 100px;
     
+    }
+    
+    #jeudupendu{
+        height: 150px;
     }
     
     #camera_thermique{

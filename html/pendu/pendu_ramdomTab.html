@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Pendu_random</title>
+    <script src="./mot.js"></script>
+    <script>
+
+
+
+
+
+          let dejaSaisie = '';
+            let mot = '';
+          let affichable = '';
+          let erreurs=0 ;
+
+          function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+function rejouer() {
+
+    window.location.reload()
+
+};
+
+
+          function start(){
+   
+              getRandomInt(mots.length);
+             mot=mots[getRandomInt(mots.length)];
+             console.log(mot);
+            return mot;
+            
+   
+            };
+            
+        function lettreDejaSaisie(lettre)
+        {
+            let x = dejaSaisie.indexOf(lettre);
+    
+            if(x == -1){
+                dejaSaisie = dejaSaisie+ lettre;
+            }
+            if(affichable=mot){
+                
+            }
+            return (x>-1);                                                      //retourne true or false
+        }
+        
+
+        function saisie(lettre) {
+
+          if (affichMot(lettre)){
+            // alert('Super');
+            
+          } 
+          else 
+          {
+            //   alert ('pas bon');mausaive lettre
+            erreurs++;
+            affich = document.getElementById('affich');
+            affichageboutton =document.getElementById('Affichageboutton');
+            
+            
+           
+                if(erreurs<2){
+                    affich.textContent = `Tu as fait  ${erreurs} erreur` ; //quand il a moins de de 2 erreurs on affiche erreur
+                };
+                if(erreurs>0){
+                    affich.textContent = `Tu as fait ${erreurs} erreurs` ;  //quand il a plus d'une seule erreur on affiche erreurs
+                };
+        
+                if(erreurs==10){
+                    affich.textContent = "TU AS PERDU";
+                    buttonPerdu = document.createElement('input')
+                    affichageboutton.appendChild(buttonPerdu);
+                    buttonPerdu.setAttribute("onclick","rejouer()")
+                    buttonPerdu.setAttribute("type","button");
+                    buttonPerdu.setAttribute("id","buttonPerdu");
+                    buttonPerdu.setAttribute("value","Rejouer");
+                    document.getElementById("clavier").style.display="none";
+                }
+              
+              
+            suite();
+
+          }
+            
+        }
+
+        function affichMot(lettre)
+        {           
+            let x = mot.indexOf(lettre); 
+            document.getElementById('boutton'+lettre).disabled=true;
+        
+            if(x > -1){
+                let affichable2= "";
+                for(let i=0; i<mot.length; i++){
+                    if(lettre==mot[i]){
+                        affichable2  = affichable2+lettre;
+                        
+                    } else{
+                        affichable2=affichable2+affichable[i];
+                    }
+                    console.log(affichable2);
+                } 
+	          affichable=affichable2;
+                document.getElementById("motAffichable").innerText=affichable;
+            }
+            
+            return (x>-1);
+        }
+
+        function init(){
+            start();
+            for (let i=0; i<mot.length; i++){
+
+                affichable =affichable+ "_";
+            } erreurs=0;
+        document.getElementById("motAffichable").innerText=affichable;
+        }
+
+
+        let image=0;
+			function suite() {
+				
+					document.getElementById("pendu"+image).style.visibility = "hidden";
+					image++;
+					document.getElementById("pendu"+image).style.visibility = "visible";
+				
+			}
+
+    </script>
+  
+   <style>
+    .pendu {
+        position: absolute;
+        top:30px;
+        left:0;
+    }
+    #imagePendu {
+        position:relative;
+        top:250px;
+        left:450px;
+    }
+</style>
+</head>
+<body onload="init()">
+
+    <h1>Le jeu du pendu</h1>
+
+<div id="clavier">
+    <button onclick="saisie('A');"    id="bouttonA">A</button>
+    <button onclick="saisie('Z');"   id="bouttonZ">z</button>
+    <button onclick="saisie('E');"   id="bouttonE">E</button>
+    <button onclick="saisie('R');"  id="bouttonR">R</button>
+    <button onclick="saisie('T');"  id="bouttonT">T</button>
+    <button onclick="saisie('Y');"   id="bouttonY">Y</button>
+    <button onclick="saisie('U');"  id="bouttonU">U</button>
+    <button onclick="saisie('I');"  id="bouttonI">I</button>
+    <button onclick="saisie('O');"  id="bouttonO">O</button>
+    <button onclick="saisie('P');"  id="bouttonP">P</button>
+    <br>
+
+    <button onclick="saisie('Q');"  id="bouttonQ">Q</button>
+    <button onclick="saisie('S');"  id="bouttonS">S</button>
+    <button onclick="saisie('D');"  id="bouttonD">D</button>
+    <button onclick="saisie('F');"  id="bouttonF">F</button>
+    <button onclick="saisie('G');"  id="bouttonG">G</button>
+    <button onclick="saisie('H');"  id="bouttonH">H</button>
+    <button onclick="saisie('J');"  id="bouttonJ">J</button>
+    <button onclick="saisie('K');"  id="bouttonK">K</button>
+    <button onclick="saisie('L');"  id="bouttonL">L</button>
+    <button onclick="saisie('M');" id="bouttonM">M</button>
+
+    <br>
+  
+    <button onclick="saisie('W');"  id="bouttonW">W</button>
+    <button onclick="saisie('X');"  id="bouttonX">X</button>
+    <button onclick="saisie('C');"  id="bouttonC">C</button>
+    <button onclick="saisie('V');"  id="bouttonV">V</button>
+    <button onclick="saisie('B');"  id="bouttonB">B</button>
+    <button onclick="saisie('N');"  id="bouttonN">N</button>
+     
+  <br>
+  <div id="imagePendu">
+    <img class="pendu" style="visibility:visible" id="pendu0"  src="./img/pendu0.png">
+    <img class="pendu" style="visibility:hidden"  id="pendu1"  src="./img/pendu1.png">
+    <img class="pendu" style="visibility:hidden"  id="pendu2"  src="./img/pendu2.png">			
+    <img class="pendu" style="visibility:hidden"  id="pendu3"  src="./img/pendu3.png">
+    <img class="pendu" style="visibility:hidden"  id="pendu4"  src="./img/pendu4.png">
+    <img class="pendu" style="visibility:hidden"  id="pendu5"  src="./img/pendu5.png">
+    <img class="pendu" style="visibility:hidden"  id="pendu6"  src="./img/pendu6.png">			
+    <img class="pendu" style="visibility:hidden"  id="pendu7"  src="./img/pendu7.png">
+    <img class="pendu" style="visibility:hidden"  id="pendu8"  src="./img/pendu8.png">
+    <img class="pendu" style="visibility:hidden"  id="pendu9"  src="./img/pendu9.png">
+    <img class="pendu" style="visibility:hidden"  id="pendu10" src="./img/pendu10.png">
+</div>
+</div>
+
+  <span id="motAffichable"></span>
+
+
+<p id="affich"></p>
+<div id="Affichageboutton"></div>
+
+
+
+</body>
+</html>
