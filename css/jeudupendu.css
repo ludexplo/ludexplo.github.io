@@ -8,3 +8,126 @@
     top:20px;
     left:450px;
 }
+
+/* media queries */
+@media screen and (max-width:1000px){
+    .pendu {
+        height: 100px;
+    }
+
+    #imagePendu {
+        position:relative;
+        top:20px;
+        left:0px;
+    }
+
+    #bouttonA{
+        padding: 8px;
+    }
+
+    #bouttonZ{
+        padding: 8px;
+    }
+
+    #bouttonE{
+        padding: 8px;
+    }
+
+    #bouttonR{
+        padding: 8px;
+    }
+
+    #bouttonT{
+        padding: 8px;
+    }
+
+    #bouttonY{
+        padding: 8px;
+    }
+
+    #bouttonU{
+        padding: 8px;
+    }
+    
+    #bouttonI{
+        padding: 8px;
+    }
+    
+    #bouttonO{
+        padding: 8px;
+    }
+
+    #bouttonP{
+        padding: 8px;
+    }
+
+    #bouttonQ{
+        padding: 8px;
+    }
+
+    #bouttonS{
+        padding: 8px;
+    }
+
+    #bouttonD{
+        padding: 8px;
+    }
+
+    #bouttonF{
+        padding: 8px;
+    }
+
+    #bouttonG{
+        padding: 8px;
+    }
+
+    #bouttonH{
+        padding: 8px;
+    }
+
+    #bouttonI{
+        padding: 8px;
+    }
+
+    #bouttonJ{
+        padding: 8px;
+    }
+
+    #bouttonK{
+        padding: 8px;
+    }
+
+    #bouttonL{
+        padding: 8px;
+    }
+
+    #bouttonM{
+        padding: 8px;
+    }
+
+    #bouttonW{
+        padding: 8px;
+    }
+
+    #bouttonX{
+        padding: 8px;
+    }
+
+    #bouttonC{
+        padding: 8px;
+}
+
+#bouttonV{
+    padding: 8px;
+
+}
+
+#bouttonB{
+    padding: 8px;
+}
+
+#bouttonN{
+    padding: 8px;
+}
+
+    }
