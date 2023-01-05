@@ -1,0 +1,10 @@
+.pendu {
+    position: absolute;
+    top:30px;
+    left:0;
+}
+#imagePendu {
+    position:relative;
+    top:20px;
+    left:450px;
+}
