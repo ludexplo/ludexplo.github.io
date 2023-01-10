@@ -343,6 +343,7 @@ span{
         display: block;
         margin-left: auto;
         margin-right: auto;
+        height: 500px;
     }
 
     #jeudupendu{
@@ -532,7 +533,7 @@ width: 150px;
     }
     
     #photo{
-        height: 100px;
+        height: 110px;
     
     }
     
